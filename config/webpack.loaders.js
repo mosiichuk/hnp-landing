@@ -101,7 +101,7 @@ const imageLoader = {
 const images = {
     test: /\.(gif|png|jpe?g|svg)$/,
     include: [
-        path.resolve(__dirname, '../src/img/')
+        path.resolve(__dirname, '../src/img')
     ],
     use: [
         'file-loader?name=img/[name].[hash].[ext]&esModule=false',
@@ -112,7 +112,7 @@ const images = {
 const icons = {
     test: /\.(gif|png|jpe?g|svg)$/,
     include: [
-        path.resolve(__dirname, '../src/icons/')
+        path.resolve(__dirname, '../src/icons')
     ],
     use: [
         'file-loader?name=icons/[name].[hash].[ext]&esModule=false',
@@ -122,7 +122,10 @@ const icons = {
 
 const fonts = {
     test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
-    exclude: /img/,
+    exclude: [
+        /img/,
+        /icons/
+    ],
     use: [{
         loader: 'file-loader',
         query: {

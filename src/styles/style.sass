@@ -8,3 +8,162 @@
 
 html
     scroll-behavior: smooth
+
+body
+    font-family: 'Work Sans', sans-serif
+    font-size: 16px
+    font-weight: $regular-text
+
+    +screen-up(xxl)
+        font-size: 18px
+
+h1
+    font-size: 38px
+    font-weight: $semi-bold-text
+
+h3
+    font-family: 'Poppins', sans-serif
+    font-size: 32px
+    font-weight: $regular-text
+    text-align: center
+    margin: 0 0 32px
+
+.img-fluid
+    width: 100%
+
+.cta-btn
+    color: $text-white
+    background-color: $accent
+    padding: 13px 20px
+    border-radius: 2px
+    font-size: 16px
+    font-weight: $regular-text
+    text-transform: uppercase
+
+.main
+    min-height: 100vh
+    padding: 10vh 0 0
+
+    & h1
+        padding: 0 0 7vh
+
+    & p
+        margin: 0 0 3vh
+
+        &:last-of-type
+            margin: 0 0 7vh
+
+    &-content
+        padding: 15vh 0 0
+
+.hero-img
+    position: absolute
+    width: 100%
+    height: auto
+
+    +screen-up(xxl)
+        top: -10vh
+
+.about-us-text
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    & > p
+        margin: 0 0 16px
+
+.instruction-step
+    display: flex
+    margin-bottom: 32px
+
+    &__number
+        min-width: 60px
+        height: 60px
+        background: url('../img/star.svg') no-repeat top center / contain
+        color: $text-white
+        font-size: 50px
+        display: flex
+        justify-content: center
+        align-items: center
+
+    & > p
+        max-width: 240px
+        width: 100%
+        margin: 0 0 0 15px
+
+.alternative-section
+    background-color: $bg-grey
+    padding: 24px 0
+    overflow-y: hidden
+
+.program-desc
+    max-width: 750px
+    width: 100%
+    margin: 5% 0
+
+    +screen-up(lg)
+        margin: 0
+
+.rounded
+    position: relative
+    border: 0 solid #FFFFFF
+
+    &::after
+        content: ''
+        background-color: #FFFFFF
+        border-radius: 50%
+        position: absolute
+        width: 100%
+        top: -24px
+        left: 0
+        z-index: 0
+
+        +screen-down(xxl)
+            display: none
+
+        +screen-up(xl)
+            height: 332px
+            transform: translateY(-25%)
+
+        +screen-up(xxl)
+            height: 442px
+            transform: translateY(-30%)
+
+    & > a
+        z-index: 1
+
+.content-section
+    padding: 60px 0
+
+.commenter
+    padding: 28px 28px 50px
+    max-width: 350px
+    width: 100%
+    text-align: center
+    border: 5px solid #F8F8F8
+
+    &:nth-child(2)
+        margin: 0 5%
+
+        +screen-down(md)
+            margin: 5% 0
+
+    & img
+        width: 130px
+        height: 130px
+        margin: 0 0 10px
+
+    & h4
+        margin: 0 0 10px
+        text-transform: uppercase
+        font-weight: $bold-text
+
+.rating
+    display: flex
+    justify-content: center
+    margin: 0 0 30px
+
+.star
+    width: 19px
+    height: 19px
+    background: url('../icons/rating-star.svg')
