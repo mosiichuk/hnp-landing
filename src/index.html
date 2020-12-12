@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Hpm</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins&family=Work+Sans:ital,wght@0,300;0,400;0,500;1,500&display=swap"
@@ -55,11 +55,39 @@
     </div>
 </section>
 
-<section class="content-section">
+<section class="content-section perks">
     <h3>Affiliate perks</h3>
-    <div class="row">
-        <div class="col-12 col-lg-10">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10 d-flex justify-content-between">
+                <div class="perks-card">
+                    <img src="./icons/badge-icon.svg" alt="Badge">
+                    <p>15% off code for followers</p>
+                </div>
 
+                <div class="perks-card">
+                    <img src="./icons/bottle-icon.svg" alt="Bottle icon">
+                    <p>1 Free bottle of CBD oil or gummies per month for all active affiliates </p>
+                </div>
+
+                <div class="perks-card">
+                    <img src="./icons/atom-icon.svg" alt="Atom icon">
+                    <p>25% Commission on all sales with a 60-day cookie</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10 d-flex justify-content-center">
+                <div class="perks-card mr-5">
+                    <img src="./icons/shop-icon.svg" alt="Shop icon">
+                    <p>Top performs earn the ability to become independent distributor selling b2b</p>
+                </div>
+
+                <div class="perks-card ml-5">
+                    <img src="./icons/boy-icon.svg" alt="Client icon">
+                    <p>1 Bottle of CBD oil donated to someone in need with every bottle sold</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -227,22 +255,104 @@
     <h3>F.A.Q.</h3>
 
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-lg-4">
 
+        <div class="row" id="accordion1">
+            <div class="col-12 col-xl-4">
+                <div class="accordion-tab">
+                    <button>How long does it take to see sales in my portal?</button>
+                    <p>
+                        Generally it will take 1-2 business days to show up as it has to be manually
+                        approved.
+                    </p>
+                </div>
+
+                <div class="accordion-tab">
+                    <button>How long does it take to see sales in my portal?</button>
+                    <p>
+                        Generally it will take 1-2 business days to show up as it has to be manually
+                        approved.
+                    </p>
+                </div>
             </div>
 
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-xl-4">
+                <div class="accordion-tab">
+                    <button>How long does it take to see sales in my portal?</button>
+                    <p>
+                        Every affiliate will have their own code to advertise with which will give
+                        their followers / referrals 10% off. Whenever this code is used you will be
+                        given 10% of that sale. Your code should have been sent out to you in an
+                        email about 24-48 hours after being accepted.
+                    </p>
+                </div>
 
+                <div class="accordion-tab">
+                    <button>How long does it take to see sales in my portal?</button>
+                    <p>
+                        Generally it will take 1-2 business days to show up as it has to be manually
+                        approved.
+                    </p>
+                </div>
             </div>
 
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-xl-4">
+                <div class="accordion-tab">
+                    <button>How long does it take to see sales in my portal?</button>
+                    <p>
+                        All we ask is that you either have one sale per month with your 10% code OR
+                        you buy one time a month with your 25% off code (which is the highest
+                        discount available at Ryse).
+                    </p>
+                </div>
 
+                <div class="accordion-tab">
+                    <button>How long does it take to see sales in my portal?</button>
+                    <p>
+                        Generally it will take 1-2 business days to show up as it has to be manually
+                        approved.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
+<section class="content-section">
+    <h3>Affiliate application</h3>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-6">
+
+                <form id="application-form" class="application-form">
+                    <h4>Become our affiliate. Sign up here!</h4>
+
+                    <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" class="form-control" id="firstname">
+                    </div>
+                    <div class="form-group">
+                        <label for="secondname">Second Name</label>
+                        <input type="text" class="form-control" id="secondname">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirm-password">
+                    </div>
+                    <button type="submit" class="cta-btn">Become affiliate</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
 </body>
 </html>

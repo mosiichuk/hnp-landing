@@ -39,6 +39,9 @@ h3
     font-size: 16px
     font-weight: $regular-text
     text-transform: uppercase
+    transition: background-color .35s ease-in-out
+    &:hover
+        background-color: darken($accent, 10%)
 
 .main
     min-height: 100vh
@@ -167,3 +170,97 @@ h3
     width: 19px
     height: 19px
     background: url('../icons/rating-star.svg')
+
+.accordion
+
+    &-tab
+        width: 100%
+        overflow: hidden
+        margin: 0 0 24px
+
+    &-title
+        width: 100%
+        color: $text-white
+        display: flex
+        justify-content: space-between
+        padding: 1em
+        background: $accent
+        font-weight: bold
+        cursor: pointer
+
+        &--open::after
+            transform: rotate(90deg)
+
+
+        &:hover
+            background: darken($accent, 10%)
+
+        &::after
+            content: "\276F"
+            width: 1em
+            height: 1em
+            text-align: center
+            transition: all .35s
+
+    &-content
+        color: $text-black
+        transition: all .35s
+        padding: 14px 18px 24px
+        border-bottom: 1px solid $accent
+
+        &--hidden
+            padding-top: 0
+            padding-bottom: 0
+            height: 0
+.perks
+
+    & .row:not(:last-child)
+        margin: 0 0 52px
+
+    &-card
+        width: 100%
+        max-width: 27%
+        text-align: center
+        padding: 39px 42px 49px
+        box-shadow: 0 3px 0 #42A4FA, 0 0 23px rgba(0, 0, 0, 0.09)
+        border-radius: 2px
+
+    & img
+        margin: 0 0 38px
+
+.application-form
+    margin: 100px 0 0
+    padding: 32px 5%
+    border: 4px solid #68B8CF
+    position: relative
+
+    &:before
+        position: absolute
+        content: ''
+        width: 247px
+        height: 90px
+        background: url('../img/form-logo.jpg') no-repeat top center / contain
+        top: 0
+        left: 50%
+        transform: translate(-50%, -75%)
+
+    +screen-up(lg)
+        padding: 32px 15%
+
+    & h4
+        margin-bottom: 32px
+        font-size: 24px
+
+    & .form-group
+        margin: 0 0 16px
+
+    & .cta-btn
+        display: block
+        margin: 0 auto
+
+    & label
+        margin: 0 0 16px
+
+    & input
+        height: auto
+        padding: 15px 10px
