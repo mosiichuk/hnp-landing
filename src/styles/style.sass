@@ -7,12 +7,19 @@
 @import "util/animations"
 
 html
+    height: 100%
     scroll-behavior: smooth
+    -ms-overflow-style: none
+    scrollbar-width: none
+
+::-webkit-scrollbar
+    display: none
 
 body
     font-family: 'Work Sans', sans-serif
     font-size: 16px
     font-weight: $regular-text
+    height: 100%
 
     +screen-up(xxl)
         font-size: 18px
@@ -31,6 +38,14 @@ h3
 .img-fluid
     width: 100%
 
+section
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    position: relative
+
 .cta-btn
     color: $text-white
     background-color: $accent
@@ -40,12 +55,11 @@ h3
     font-weight: $regular-text
     text-transform: uppercase
     transition: background-color .35s ease-in-out
+
     &:hover
         background-color: darken($accent, 10%)
 
 .main
-    min-height: 100vh
-    padding: 10vh 0 0
 
     & h1
         padding: 0 0 7vh
@@ -53,27 +67,38 @@ h3
     & p
         margin: 0 0 3vh
 
-        &:last-of-type
-            margin: 0 0 7vh
-
     &-content
-        padding: 15vh 0 0
+        padding: 15vh 0 5vh
 
 .hero-img
     position: absolute
+    top: 0
     width: 100%
     height: auto
 
     +screen-up(xxl)
         top: -10vh
 
-.about-us-text
-    display: flex
-    flex-direction: column
-    justify-content: center
+.perks
 
-    & > p
-        margin: 0 0 16px
+    & .row:not(:last-child)
+        +screen-up(lg)
+            margin: 0 0 52px
+
+    &-card
+        width: 100%
+        text-align: center
+        padding: 39px 42px 49px
+        box-shadow: 0 3px 0 #42A4FA, 0 0 23px rgba(0, 0, 0, 0.09)
+        border-radius: 2px
+        margin: 0 0 25px
+
+        +screen-up(lg)
+            margin: 0
+            max-width: 27%
+
+        & img
+            margin: 0 0 38px
 
 .instruction-step
     display: flex
@@ -94,49 +119,14 @@ h3
         width: 100%
         margin: 0 0 0 15px
 
-.alternative-section
-    background-color: $bg-grey
-    padding: 24px 0
-    overflow-y: hidden
 
-.program-desc
-    max-width: 750px
-    width: 100%
-    margin: 5% 0
+.about-us-text
+    display: flex
+    flex-direction: column
+    justify-content: center
 
-    +screen-up(lg)
-        margin: 0
-
-.rounded
-    position: relative
-    border: 0 solid #FFFFFF
-
-    &::after
-        content: ''
-        background-color: #FFFFFF
-        border-radius: 50%
-        position: absolute
-        width: 100%
-        top: -24px
-        left: 0
-        z-index: 0
-
-        +screen-down(xxl)
-            display: none
-
-        +screen-up(xl)
-            height: 332px
-            transform: translateY(-25%)
-
-        +screen-up(xxl)
-            height: 442px
-            transform: translateY(-30%)
-
-    & > a
-        z-index: 1
-
-.content-section
-    padding: 60px 0
+    & > p
+        margin: 0 0 16px
 
 .commenter
     padding: 28px 28px 50px
@@ -212,21 +202,6 @@ h3
             padding-top: 0
             padding-bottom: 0
             height: 0
-.perks
-
-    & .row:not(:last-child)
-        margin: 0 0 52px
-
-    &-card
-        width: 100%
-        max-width: 27%
-        text-align: center
-        padding: 39px 42px 49px
-        box-shadow: 0 3px 0 #42A4FA, 0 0 23px rgba(0, 0, 0, 0.09)
-        border-radius: 2px
-
-    & img
-        margin: 0 0 38px
 
 .application-form
     margin: 100px 0 0
@@ -264,3 +239,20 @@ h3
     & input
         height: auto
         padding: 15px 10px
+
+.section-scroll-next-wrapper
+    position: absolute
+    bottom: 0
+    justify-content: center
+    display: none
+
+    +screen-up(lg)
+        display: flex
+
+.section-scroll-next
+    padding: 3rem
+    transition: all .3s ease
+    pointer-events: all
+
+.section-scroll-next:hover
+    padding: 4rem 5rem 2rem
