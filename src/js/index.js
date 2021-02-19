@@ -1,4 +1,5 @@
 import Accordeon from './accordeon';
+import './scrollReveal'
 
 const contentLoaded = () => {
     new Accordeon({
