@@ -39,7 +39,7 @@
         "popper.js": "^1.16.1",
         "postcss-loader": "^3.0.0",
         "postcss-sass": "^0.4.1",
-        "sass-loader": "^8.0.2",
+        "sass-loader": "^12.1.0",
         "scrollreveal": "^4.0.7",
         "style-loader": "^1.0.0",
         "swiper": "^6.4.15",
